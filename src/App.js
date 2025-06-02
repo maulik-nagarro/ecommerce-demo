@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useEffect } from 'react';
 import './App.css';
 import { ApplicationInsights } from '@microsoft/applicationinsights-web';
@@ -8,7 +9,7 @@ function App() {
       instrumentationKey: process.env.REACT_APP_AZURE_APPLICATION_INSIGHT_STRING // Replace with your actual key
     }
   });
-  
+
   useEffect(() => {
     appInsights.loadAppInsights();
 
