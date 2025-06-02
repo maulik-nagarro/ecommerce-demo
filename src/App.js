@@ -1,4 +1,5 @@
 // @ts-nocheck
+/* eslint-disable */
 import { useEffect } from 'react';
 import './App.css';
 import { ApplicationInsights } from '@microsoft/applicationinsights-web';
@@ -14,7 +15,7 @@ function App() {
     appInsights.loadAppInsights();
 
     document.title = "Azure Trainig | Home"
-  }, [appInsights]);
+  }, []);
 
   
 
