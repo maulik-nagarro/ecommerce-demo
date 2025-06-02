@@ -12,11 +12,11 @@ console.log("Connection String:", process.env);
 const appInsights = new ApplicationInsights({
   config: {
     connectionString: process.env.REACT_APP_AZURE_APPLICATION_INSIGHT_STRING, 
-    enableAutoRouteTracking: true // optional but useful for SPAs like React
+    enableAutoRouteTracking: true
   }
 });
 appInsights.loadAppInsights();
-appInsights.trackPageView(); // Manually  call to track first page
+appInsights.trackPageView();
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
