@@ -16,7 +16,7 @@ const appInsights = new ApplicationInsights({
   }
 });
 appInsights.loadAppInsights();
-appInsights.trackPageView(); // Manually call to track first page
+appInsights.trackPageView(); // Manually  call to track first page
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
