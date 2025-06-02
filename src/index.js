@@ -7,6 +7,8 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import About from './About';
 import { ApplicationInsights } from '@microsoft/applicationinsights-web';
 
+console.log("Connection String:", process.env);
+
 const appInsights = new ApplicationInsights({
   config: {
     connectionString: process.env.REACT_APP_AZURE_APPLICATION_INSIGHT_STRING, 
