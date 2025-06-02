@@ -7,7 +7,7 @@ function App() {
     appInsights.loadAppInsights();
 
     document.title = "Azure Trainig | Home"
-  }, []);
+  }, [appInsights]);
 
   const appInsights = new ApplicationInsights({
     config: {
