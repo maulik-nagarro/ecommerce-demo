@@ -5,6 +5,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from "react-router";
 import About from './About';
+import { ApplicationInsights } from '@microsoft/applicationinsights-web';
+
+const appInsights = new ApplicationInsights({
+  config: {
+    connectionString: process.env.REACT_APP_AZURE_APPLICATION_INSIGHT_STRING, 
+    enableAutoRouteTracking: true // optional but useful for SPAs like React
+  }
+});
+appInsights.loadAppInsights();
+appInsights.trackPageView(); // Manually call to track first page
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
