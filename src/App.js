@@ -3,17 +3,19 @@ import './App.css';
 import { ApplicationInsights } from '@microsoft/applicationinsights-web';
 
 function App() {
+  const appInsights = new ApplicationInsights({
+    config: {
+      instrumentationKey: process.env.REACT_APP_AZURE_APPLICATION_INSIGHT_STRING // Replace with your actual key
+    }
+  });
+  
   useEffect(() => {
     appInsights.loadAppInsights();
 
     document.title = "Azure Trainig | Home"
   }, [appInsights]);
 
-  const appInsights = new ApplicationInsights({
-    config: {
-      instrumentationKey: process.env.REACT_APP_AZURE_APPLICATION_INSIGHT_STRING // Replace with your actual key
-    }
-  });
+  
 
   return (
     <div className="App">
